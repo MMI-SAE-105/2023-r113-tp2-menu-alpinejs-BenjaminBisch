@@ -27,11 +27,21 @@
         z-index: 10;
       }
     </style>
+    
+<script defer src="https://unpkg.com/alpinejs"></script>
   </head>
   <body>
     <!-- https://emmet.io/ -->
     <!-- header>h1{Test de menu} -->
-    <button>menu</button>
+    <button aria-controls="mainNav" menu </button>
+      <h1>Test de menu</h1>
+      <nav id="mainNav" x-show="menuIsOpen">
+        <ul>
+          <li><a href="#">item 1</a></li>
+          <li><a href="#">item 2</a></li>
+          <li><a href="#">item 3</a></li>
+        </ul>
+      </nav>  
     <header>
 
       <button aria-controls="mainNav" @click="menuIsOpen = ! menuIsOpen" class="header__menubtn">
