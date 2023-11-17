@@ -1,10 +1,60 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" x-data="{
+    menuIsOpen: false,
+    acordeon: false,
+ 
+   }" 
+   :class="{noscroll:menuIsOpen,}">
+
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tout les Chiens</title>
+    <script defer src="https://unpkg.com/alpinejs"></script>
+
+    <style>
+        .menu {
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100vw;
+          height: 100vh;
+          background: #fff;
+          display: grid;
+          place-content: center;
+        }
+        .header_menuBtn {
+          position: relative;
+          z-index: 10;
+        }
+      </style>
+      
   </head>
 
-<h1>Tout les Chiens</h1>
+
+
+<body>
+    <h1>Tout les Chiens</h1>
+    <h1>Chien 1</h1>
+    <img src="/public/img/Chien/1200px-German_shepherd_wanting_to_play.JPG" alt="Chien 1" width="400" height="250">
+    <h1>Chien 2</h1>
+<img src="/public/img/Chien/Beagle_portrait_Camry.jpg" alt="Chien 2" width="400" height="250">
+<header>
+  
+<h1>Menu Chiens</h1>
+      <button aria-controls="mainNav" @click="menuIsOpen = ! menuIsOpen" class="header__menubtn">
+       Chiens 1 et 2
+      </button>
+      <nav id="mainNav" x-show="menuIsOpen" x-transition.duration.800ms class="menu">
+        <ul>
+          <li><a href="/dogs/index.html">Les Chiens</a></li>
+            <ul>
+              <li><a href="/dogs/chien-1.html">Chien 1</a></li>
+              <li><a href="/dogs/chien-2.html">Chien 2</a></li>
+            </ul>
+          </li>
+      </nav>
+
+   
+    </header>
