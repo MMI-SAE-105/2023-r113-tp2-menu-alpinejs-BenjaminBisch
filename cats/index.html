@@ -1,11 +1,60 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" x-data="{
+    menuIsOpen: false,
+    acordeon: false,
+ 
+   }" 
+   :class="{noscroll:menuIsOpen,}">
+
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tout les Chats</title>
+    <script defer src="https://unpkg.com/alpinejs"></script>
+
+    <style>
+        .menu {
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100vw;
+          height: 100vh;
+          background: #fff;
+          display: grid;
+          place-content: center;
+        }
+        .header_menuBtn {
+          position: relative;
+          z-index: 10;
+        }
+      </style>
+      
   </head>
 
-<h1>Tout les chats</h1>
 
+
+<body>
+    <h1>Tout les chats</h1>
+    <h1>Chat 1</h1>
+    <img src="/public/img/Chat/Cat_yawning_in_park.jpg" alt="Chat 1" width="400" height="250">
+    <h1>Chat 2</h1>
+<img src="/public/img/Chat/Cautious_Tabby_Red_Cat.jpg" alt="Chat 2" width="400" height="250">
+<header>
+  
+<h1>Menu Chats</h1>
+      <button aria-controls="mainNav" @click="menuIsOpen = ! menuIsOpen" class="header__menubtn">
+       Chats 1 et 2
+      </button>
+      <nav id="mainNav" x-show="menuIsOpen" x-transition.duration.800ms class="menu">
+        <ul>
+          <li><a href="cats/index.html">Les chats</a></li>
+            <ul>
+              <li><a href="cats/chat-1.html">chat 1</a></li>
+              <li><a href="cats/chat-2.html">chat 2</a></li>
+            </ul>
+          </li>
+      </nav>
+
+   
+    </header>

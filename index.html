@@ -28,7 +28,6 @@
       }
     </style>
     
-<script defer src="https://unpkg.com/alpinejs"></script>
   </head>
 
 
@@ -37,12 +36,10 @@
     <!-- header>h1{Test de menu} -->
    
     <header>
-      <h1>
-        Tout les chats
-      </h1>
-
+  
+<h1>chats et chiens</h1>  
       <button aria-controls="mainNav" @click="menuIsOpen = ! menuIsOpen" class="header__menubtn">
-        Chat 
+        Menu Chat et Chien
       </button>
       <nav id="mainNav" x-show="menuIsOpen" x-transition.duration.800ms class="menu">
         <ul>
@@ -52,24 +49,15 @@
               <li><a href="cats/chat-2.html">chat 2</a></li>
             </ul>
           </li>
-      </nav>
-
-      <h1>
-        Tout les chiens
-      </h1>
-
-      <button aria-controls="Chien" @click="menuIsOpen = ! menuIsOpen" class="Menu_chien">
-        Chien 
-      </button>
-      <nav id="Chien" x-show="menuIsOpen" x-transition.duration.800ms class="menu1">
-        <ul>
           <li><a href="dogs/index.html">Les chiens</a></li>
             <ul>
-              <li><a href="dogs/chien 1.html">Chien 1</a></li>
-              <li><a href="dogs/chien 2.html">Chien 2</a></li>
+              <li><a href="dogs/chien-1.html">Chien 1</a></li>
+              <li><a href="dogs/chien-2.html">Chien 2</a></li>
             </ul>
           </li>
       </nav>
+
+   
     </header>
     <!-- h2>lorem2^p>lorem -->
 
